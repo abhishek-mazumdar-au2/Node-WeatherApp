@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="../../../public/img/weather.png">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+
+</head>
+
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <form action="">
+            <input type="text" placeholder="Location">
+            <button>Search</button>
+        </form>
+        <h2 id="message-1"></h2>
+        <p id="message-2"></p>
+
+    </div>
+
+
+    {{>footer}}
+    <script>
+        console.log('Hey...')
+
+
+        const weatherForm = document.querySelector('form')
+        const search = document.querySelector('input');
+        let messageOne = document.querySelector('#message-1')
+        let messageTwo = document.querySelector('#message-2')
+
+        messageOne.textContent = 'Please look up for any location.'
+        messageTwo.textContent = ''
+
+
+        weatherForm.addEventListener('submit', (e) => {
+            e.preventDefault()
+            const location = search.value;
+            console.log(location);
+            messageOne.textContent = 'Fetching weather...';
+            messageTwo.textContent = '';
+            fetch(`http://localhost:3000/weather?address=${location}`).then(response => {
+                response.json().then(data => {
+                    messageOne.textContent = 'Fetching weather...';
+                    messageTwo.textContent = '';
+                    if (data.err) {
+                        messageOne.textContent = data.err
+                    } else {
+                        console.log(data)
+                        messageOne.textContent = `${data.temperature} C`
+                        messageTwo.textContent = `You are looking up for ${data.location}. It is ${data.summary} in there right now.`
+                    }
+
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+body {
+  color: #eee;
+  background: #333;
+  font-family: arial;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+.header {
+  margin-top: 16px;
+  margin-bottom: 48px;
+}
+footer {
+  background-color: #eee;
+  opacity: 0.85;
+  border-top: 1px solid #333;
+  margin-top: 16px;
+  padding: 16px 8px;
+  color: black;
+  font-family: arial;
+  font-size: 12px;
+}
+h1 {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+header a {
+  color: #888888;
+  margin-right: 16px;
+  text-decoration: none;
+}
+.portrait {
+  width: 250px;
+  margin: 16px auto;
+}
+input {
+  border: 1px solid #cccccc;
+  padding: 8px;
+  width: 564px;
+  margin-top: 21px;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #888888;
+  background: #888888;
+  color: white;
+  padding: 8px;
+}
+button:hover {
+  background: white;
+  color: black;
+  transition: 0.65s;
+}
+#message-1 {
+  font-size: 60px;
+}
+#message-2 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 36px;
+}
+.about {
+  position: absolute;
+  right: 365px;
+  bottom: 32px;
+}
+/* media queries */
+
+@media (max-width: 360px) {
+  body {
+    color: #eee;
+    background: #333;
+    font-family: arial;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+    width: 311px;
+    margin-top: 21px;
+  }
+  button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+    width: 329px;
+    margin-top: 7px;
+  }
+  button:hover {
+    background: white;
+    color: black;
+    transition: 0.65s;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    color: #eee;
+    background: #333;
+    font-family: arial;
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+    width: 311px;
+    margin-top: 21px;
+  }
+  button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+    width: 329px;
+    margin-top: 7px;
+  }
+  button:hover {
+    background: white;
+    color: black;
+    transition: 0.65s;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  body {
+    color: #eee;
+    background: #333;
+    font-family: arial;
+    max-width: 414px;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+    width: 362px;
+    margin-top: 21px;
+  }
+  button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+    width: 380px;
+    margin-top: 7px;
+  }
+  button:hover {
+    background: white;
+    color: black;
+    transition: 0.65s;
+  }
+  .about {
+    position: absolute;
+    right: 17px;
+    bottom: -27px;
+  }
+}
