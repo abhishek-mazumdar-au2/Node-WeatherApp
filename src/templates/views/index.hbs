@@ -21,6 +21,7 @@
         </form>
         <h2 id="message-1"></h2>
         <p id="message-2"></p>
+        <p id="message-3"></p>
 
     </div>
 
@@ -34,9 +35,13 @@
         const search = document.querySelector('input');
         let messageOne = document.querySelector('#message-1')
         let messageTwo = document.querySelector('#message-2')
+        //let messageThree = document.querySelector('#message-3')
+
 
         messageOne.textContent = 'Please look up for any location.'
         messageTwo.textContent = ''
+        //messageThree.textContent = ''
+
 
 
         weatherForm.addEventListener('submit', (e) => {
@@ -44,10 +49,9 @@
             const location = search.value;
             messageOne.textContent = 'Fetching weather...';
             messageTwo.textContent = '';
+            //messageThree.textContent = '';
             fetch(`/weather?address=${location}`).then(response => {
                 response.json().then(data => {
-                    messageOne.textContent = 'Fetching weather...';
-                    messageTwo.textContent = '';
                     if (data.err) {
                         messageOne.textContent = data.err
                     } else if(data.temperature===undefined||data.location===undefined||data.summary===undefined){
@@ -56,6 +60,8 @@
                         console.log(data)
                         messageOne.textContent = `${data.temperature} C`
                         messageTwo.textContent = `You are looking up for ${data.location}. It is ${data.summary} in there right now.`
+                       // messageThree.textContent = `Chances of rain ${data.rain}. ${data.humidity} humidity.`
+
                     }
 
                 })

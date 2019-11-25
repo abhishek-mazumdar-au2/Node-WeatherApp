@@ -23,10 +23,19 @@ const forecast = (lat, long, callback) => {
     } else if (error) {
       callback("Unable to find the location. Try another search.", undefined);
     } else {
+      console.log(
+        currently.temperature,
+        currently.time.toLocaleString(),
+        currently.summary,
+        currently.precipProbability,
+        currently.humidity
+        )
       callback(undefined, {
         temperature: currently.temperature,
         time: currently.time / 86400000,
-        summary: currently.summary
+        summary: currently.summary,
+        rain: currently.precipProbability,
+        humidity: currently.humidity
       });
     }
   });
