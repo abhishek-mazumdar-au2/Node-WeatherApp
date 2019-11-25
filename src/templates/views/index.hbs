@@ -50,6 +50,8 @@
                     messageTwo.textContent = '';
                     if (data.err) {
                         messageOne.textContent = data.err
+                    } else if(data.temperature===undefined||data.location===undefined||data.summary===undefined){
+                        messageOne.textContent = `Oops..something broke!`
                     } else {
                         console.log(data)
                         messageOne.textContent = `${data.temperature} C`
