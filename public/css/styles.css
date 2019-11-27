@@ -20,14 +20,13 @@ body {
   margin-bottom: 48px;
 }
 footer {
-  background-color: #eee;
   opacity: 0.85;
-  border-top: 1px solid #333;
+  border-top: 1px solid #eee;
   margin-top: 16px;
   padding: 16px 8px;
   color: black;
   font-family: arial;
-  font-size: 12px;
+  font-size: 14px;
 }
 h1 {
   font-size: 64px;
@@ -65,6 +64,10 @@ button:hover {
   font-size: 60px;
 }
 #message-2 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 36px;
+}
+#message-3 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 36px;
 }

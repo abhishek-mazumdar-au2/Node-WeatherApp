@@ -1,10 +1,9 @@
 {
-  "name": "webServer",
+  "name": "wather-app",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-   "start": "node src/app.js"
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +12,14 @@
     "express": "^4.16.4",
     "hbs": "^4.0.1",
     "request": "^2.88.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishek-mazumdar-au2/Node-WeatherApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abhishek-mazumdar-au2/Node-WeatherApp/issues"
+  },
+  "homepage": "https://github.com/abhishek-mazumdar-au2/Node-WeatherApp#readme",
+  "description": ""
 }
